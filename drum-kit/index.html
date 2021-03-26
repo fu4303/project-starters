@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+
+    <div class="main">
+        <div class="drums" data-key="65">
+            <img id="clap" src="https://cdn.pixabay.com/photo/2014/03/25/16/26/applause-297115_640.png" alt="clapping-hands"/>
+        </div>
+        <div class="drums" data-key="83">
+            <img id="hi-hat" src="https://cdn.pixabay.com/photo/2017/02/06/12/01/hi-hat-2042775_640.png" alt="hi-hat"/>
+        </div>
+        <div class="drums" data-key="68">
+            <img id="bass" src="https://cdn.pixabay.com/photo/2014/03/25/15/17/drum-296382_960_720.png" alt="bass-drum"/>
+        </div>
+        <div class="drums" data-key="70">
+            <img id="snare" src="https://cdn.pixabay.com/photo/2017/03/06/12/01/small-drum-2121308_960_720.png" alt="snare"/>
+        </div>
+        <div class="drums" data-key="71">
+            <img id="ride" src="https://cdn.pixabay.com/photo/2017/03/09/17/56/ride-cymbal-2130415_640.png" alt="ride-cymbal"/>
+        </div>
+        <div data-key="65" class="keys">
+            <span class=sound>CLAP</span><br>
+            <kbd>A</kbd>
+        </div>
+        <div data-key="83" class="keys">
+            <span class=sound>HI-HAT</span><br>
+            <kbd>S</kbd>
+        </div>
+        <div data-key="68" class="keys">
+            <span class=sound>BASS</span><br>
+            <kbd>D</kbd>
+        </div>
+        <div data-key="70" class="keys">
+            <span class=sound>SNARE</span><br>
+            <kbd>F</kbd>
+        </div>
+        <div data-key="71" class="keys">
+            <span class=sound>RIDE</span><br>
+            <kbd>G</kbd>
+        </div>
+    </div>
+
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/snare.wav"></audio>
+    <audio data-key="71" src="sounds/ride.wav"></audio>
+
+    <script src="script.js"></script>
+  </body>
+    
+</body>
+</html>
+

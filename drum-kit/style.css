@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body { 
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.main {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drums {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 3px #061a36;
+    box-shadow: 0 0 10px 0.1px;
+    border-radius: 50px;
+    margin: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+    font-size: 60px;
+    transition:all 0.10s;
+}
+
+.keys {
+    width: 100px;
+    height: 50px;
+    background-color: #061a36;
+    border: solid 2px #6b788a;
+    box-shadow: 0 0 10px 0.1px #6b788a;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 3px solid orangered;
+}
+
+#clap {
+    margin-top: 10px;
+    height: 60px;
+}
+
+#hi-hat {
+    margin-right: 7px;
+    height: 80px;
+}
+
+#bass {
+    margin-top: 7px;
+    height: 70px;
+}
+
+#snare {
+    margin-top: 7px;
+    height: 70px;
+}
+
+#ride {
+    margin-top: 7px;
+    height: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .drums {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .keys {
+    width: 70px;
+  }
+  
+  #bass, #snare, #hi-hat, #ride {
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  
+   #clap {
+    height: 40px;
+    margin-bottom: 30px;
+  }
+}
