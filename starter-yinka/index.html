@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Self-taught front-end developer from Nigeria with flair for design, devoted to building quality websites and apps."
+    />
+    <title>Yinka Adedire - Self-taught frontend developer from Nigeria</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <script>
+      (function () {
+        const setTheme = (theme) => {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+        };
+
+        const systemPrefersDarkTheme = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
+
+        let localStorageTheme = null;
+
+        try {
+          localStorageTheme = localStorage.getItem('theme');
+        } catch (err) {
+          window.console.warn(err);
+        }
+
+        const localStorageThemeExists = !!localStorageTheme;
+
+        if (localStorageThemeExists) {
+          setTheme(localStorageTheme);
+        } else if (systemPrefersDarkTheme) {
+          setTheme('dark');
+        }
+      })();
+    </script>
+    <header>
+      <div class="logo"><a href="./index.html">Yinka</a></div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="js-nav-link" href="#project-list">Projects</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="js-nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="js-nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="js-toggle-button theme-switch">
+        <span class="theme-switch__label theme-switch__label--light"
+          >Light</span
+        >
+        <span class="theme-switch__label theme-switch__label--dark">Dark</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <span>👋 Hi,</span>
+          <h1>
+            I'm Yinka.
+            <span
+              >I'm a self-taught frontend developer with flair for design,
+              devoted to building quality websites and apps.</span
+            >
+          </h1>
+        </div>
+      </section>
+
+      <section class="project-list" id="project-list">
+        <h2>Some Of The Stuffs I've Built</h2>
+
+        <section class="project">
+          <div class="browser-mockup">
+            <figure class="browser-mockup__content project__figure">
+              <img
+                src="images/github -trends-screenshot.png"
+                alt="github trends website screenshot"
+              />
+            </figure>
+
+            <span class="browser-mockup__controls"></span>
+          </div>
+
+          <div class="project__details">
+            <h3 class="project__name">Trending Repos</h3>
+
+            <div class="project__technologies">
+              <span>HTML & CSS</span> <span>Javascript [ES6]</span>
+              <span>React</span>
+            </div>
+
+            <p class="project__copy">
+              A progressive Web Application to help you discover trending GitHub
+              repositories. You can filter by coding language or time-frequency.
+              Built with React.
+            </p>
+
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://trendingrepos.netlify.app"
+                target="_blank"
+                rel="noopener"
+                >view site</a
+              >
+
+              <a
+                class="project__link"
+                href="https://github.com/yinkakun/trending-repos"
+                target="_blank"
+                rel="noopener"
+                >view github</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="project">
+          <div class="browser-mockup">
+            <figure class="browser-mockup__content project__figure">
+              <img
+                src="images/ohmyhn-screenshot.png"
+                alt="oh my hn website screenshot"
+              />
+            </figure>
+
+            <span class="browser-mockup__controls"></span>
+          </div>
+
+          <div class="project__details">
+            <h3 class="project__name">Ohmyhn</h3>
+
+            <div class="project__technologies">
+              <span>HTML & CSS</span> <span>Javascript [ES6]</span>
+              <span>Redux</span>
+            </div>
+
+            <p class="project__copy">
+              A progressive Web Application and dark themed alternative UI
+              client for Hackernews.
+            </p>
+
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://ohmyhn.netlify.app"
+                target="_blank"
+                rel="noopener"
+                >view site</a
+              >
+
+              <a
+                class="project__link"
+                href="https://github.com/yinkakun/ohmyhn"
+                target="_blank"
+                rel="noopener"
+                >view github</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="project">
+          <div class="browser-mockup">
+            <figure class="browser-mockup__content project__figure">
+              <img
+                class="project__image"
+                src="images/pascal-screenshot.png"
+                alt="pascal website screenshot"
+              />
+            </figure>
+
+            <span class="browser-mockup__controls"></span>
+          </div>
+
+          <div class="project__details">
+            <h3 class="project__name">Pascal</h3>
+
+            <div class="project__technologies">
+              <span>HTML & CSS</span>
+            </div>
+
+            <p class="project__copy">
+              Single page landing page for an artist that makes hand made pen
+              portraits.
+            </p>
+
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://pascalpen.netlify.app"
+                target="_blank"
+                rel="noopener"
+                >view site</a
+              >
+
+              <a
+                class="project__link"
+                href="https://github.com/yinkakun/pascal"
+                target="_blank"
+                rel="noopener"
+                >view github</a
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="about" id="about">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            My name is Yinka Adedire, Self-taught frontend developer from
+            Nigeria.
+          </p>
+
+          <p>
+            My love of beautiful websites and curiosity made me discover and
+            explore Web development which naturally, led to my great interest in
+            front-end web development.
+          </p>
+
+          <p>
+            Now, I'm devoted to building quality and beautiful websites & apps.
+            Some of the technologies I've worked with are HTML & CSS, JavaScript
+            (ES6+) and React.
+          </p>
+
+          <p>
+            Apart from web development, my interest includes poetry, novels, and
+            anime.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <h2>Get In Touch</h2>
+
+          <p>
+            You can always reach out to me directly at
+            <a
+              class="contact__email"
+              href="mailto:dryinkuzz@gmail.com"
+              target="_blank"
+              >dryinkuzz@gmail.com</a
+            >
+            or on
+
+            <a
+              class="contact__email"
+              href="https://twitter.com/yinkakun"
+              target="_blank"
+              rel="noopener"
+              >Twitter</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer__nav-list">
+        <li>
+          <a href="https://twitter.com/yinkakun" target="_blank" rel="noopener"
+            >Twitter</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/yinkakun" target="_blank" rel="noopener"
+            >Github</a
+          >
+        </li>
+      </ul>
+      <p class="footer__attribution">
+        Designed And Built By
+        <a href="https://twitter.com/yinkakun" target="_blank" rel="noopener"
+          >Yinka Adedire</a
+        >
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
