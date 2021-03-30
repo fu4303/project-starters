@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind cheatsheet</title>
+
+    <meta name="keywords" content="tailwind, css, cheatsheet" />
+    <meta name="description" content="Tailwind cheatsheet" />
+    <meta property="og:title" content="Tailwind cheatsheet" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fu4303.github.io/tailwindcss-cheatsheet-2/" />
+    <meta
+      property="og:image"
+      content="https://tailwind-cheatsheet.web.app/assets/images/og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Tailwind cheatsheet" />
+    <meta property="og:description" content="Tailwind cheatsheet" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        color: black;
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        max-width: 1000px;
+        min-width: 1000px;
+        width: 1000px;
+        margin: 30px auto 50px;
+      }
+      .bg-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .bg-row div {
+        width: 100px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-right: 10px;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(14, 122, 204, 0.3);
+      }
+      .bg-row div span {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+      .bg-row div::before {
+        content: '.bg-/.text-/.border-';
+        position: relative;
+        font-size: 10px;
+      }
+      .sizes div {
+        height: 20px;
+        background-color: rgb(9, 161, 216);
+        display: flex;
+        align-items: center;
+        margin-bottom: 3px;
+        white-space: nowrap;
+        padding-left: 5px;
+      }
+      .w-screen {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .borders {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .borders-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .borders-row div {
+        width: 190px;
+        background-color: rgb(9, 161, 216);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        border-color: rgb(6, 59, 100);
+      }
+
+      .rounds div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .rounds div div {
+        width: 190px;
+        height: 30px;
+        background-color: rgb(9, 161, 216);
+        margin-bottom: 5px;
+        justify-content: center;
+      }
+
+      .border-types div {
+        width: 190px;
+        border-color: rgb(9, 161, 216);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+      }
+
+      .shadows {
+        display: flex;
+      }
+      .shadows div {
+        width: 190px;
+        height: 50px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .link {
+        padding: 10px 20px;
+        background-color: rgb(113, 222, 255);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .link svg {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        transition: fill 0.25s ease;
+      }
+      .link:hover {
+        background-color: rgb(25, 131, 163);
+        color: white;
+      }
+      .link:hover svg {
+        fill: white;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <main>
+      <h3>Click the link to copy</h3>
+      <code
+        onClick="document.execCommand('copy')"
+        id="linkCopy"
+        class="select-all mb-4 block"
+      >
+        &lt;link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet" /&gt;
+      </code>
+      <div class="links flex mb-6">
+        <a class="link" href="https://tailwindcss.com/docs" target="_blank"
+          >tailwind documentation
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 194.818 194.818"
+          >
+            <path
+              d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728
+		c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04
+		C194.818,6.19,190.789,2.161,185.818,2.161z"
+            />
+            <path
+              d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140
+		c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"
+            />
+          </svg>
+        </a>
+        <a
+          class="link"
+          href="https://github.com/tailwindlabs/tailwindcss"
+          target="_blank"
+          >tailwind github
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 194.818 194.818"
+          >
+            <path
+              d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728
+		c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04
+		C194.818,6.19,190.789,2.161,185.818,2.161z"
+            />
+            <path
+              d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140
+		c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"
+            />
+          </svg>
+        </a>
+        <a
+          class="link"
+          href="https://github.com/fu4303/tailwindcss-cheatsheet-2"
+          target="_blank"
+          >cheatsheet github
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 194.818 194.818"
+          >
+            <path
+              d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728
+		c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04
+		C194.818,6.19,190.789,2.161,185.818,2.161z"
+            />
+            <path
+              d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140
+		c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"
+            />
+          </svg>
+        </a>
+      </div>
+      <h1 class="text-3xl uppercase text-center mb-4">Tailwind cheatsheet</h1>
+      <div class="bg-container mb-6">
+        <div class="bg-row">
+          <div class="bg-black text-white">
+            <span class="text-black">black</span>
+          </div>
+          <div class="bg-white"><span>white</span></div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-gray-100"><span>gray-100</span></div>
+          <div class="bg-gray-200"><span>gray-200</span></div>
+          <div class="bg-gray-300"><span>gray-300</span></div>
+          <div class="bg-gray-400"><span>gray-400</span></div>
+          <div class="bg-gray-500 text-white">
+            <span class="text-black">gray-500</span>
+          </div>
+          <div class="bg-gray-600 text-white">
+            <span class="text-black">gray-600</span>
+          </div>
+          <div class="bg-gray-700 text-white">
+            <span class="text-black">gray-700</span>
+          </div>
+          <div class="bg-gray-800 text-white">
+            <span class="text-black">gray-800</span>
+          </div>
+          <div class="bg-gray-900 text-white">
+            <span class="text-black">gray-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-red-100"><span>red-100</span></div>
+          <div class="bg-red-200"><span>red-200</span></div>
+          <div class="bg-red-300"><span>red-300</span></div>
+          <div class="bg-red-400"><span>red-400</span></div>
+          <div class="bg-red-500"><span>red-500</span></div>
+          <div class="bg-red-600"><span>red-600</span></div>
+          <div class="bg-red-700 text-white">
+            <span class="text-black">red-700</span>
+          </div>
+          <div class="bg-red-800 text-white">
+            <span class="text-black">red-800</span>
+          </div>
+          <div class="bg-red-900 text-white">
+            <span class="text-black">red-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-yellow-100"><span>yellow-100</span></div>
+          <div class="bg-yellow-200"><span>yellow-200</span></div>
+          <div class="bg-yellow-300"><span>yellow-300</span></div>
+          <div class="bg-yellow-400"><span>yellow-400</span></div>
+          <div class="bg-yellow-500"><span>yellow-500</span></div>
+          <div class="bg-yellow-600"><span>yellow-600</span></div>
+          <div class="bg-yellow-700 text-white">
+            <span class="text-black">yellow-700</span>
+          </div>
+          <div class="bg-yellow-800 text-white">
+            <span class="text-black">yellow-800</span>
+          </div>
+          <div class="bg-yellow-900 text-white">
+            <span class="text-black">yellow-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-green-100"><span>green-100</span></div>
+          <div class="bg-green-200"><span>green-200</span></div>
+          <div class="bg-green-300"><span>green-300</span></div>
+          <div class="bg-green-400"><span>green-400</span></div>
+          <div class="bg-green-500"><span>green-500</span></div>
+          <div class="bg-green-600"><span>green-600</span></div>
+          <div class="bg-green-700 text-white">
+            <span class="text-black">green-700</span>
+          </div>
+          <div class="bg-green-800 text-white">
+            <span class="text-black">green-800</span>
+          </div>
+          <div class="bg-green-900 text-white">
+            <span class="text-black">green-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-indigo-100"><span>indigo-100</span></div>
+          <div class="bg-indigo-200"><span>indigo-200</span></div>
+          <div class="bg-indigo-300"><span>indigo-300</span></div>
+          <div class="bg-indigo-400"><span>indigo-400</span></div>
+          <div class="bg-indigo-500"><span>indigo-500</span></div>
+          <div class="bg-indigo-600"><span>indigo-600</span></div>
+          <div class="bg-indigo-700 text-white">
+            <span class="text-black">indigo-700</span>
+          </div>
+          <div class="bg-indigo-800 text-white">
+            <span class="text-black">indigo-800</span>
+          </div>
+          <div class="bg-indigo-900 text-white">
+            <span class="text-black">indigo-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-blue-100"><span>blue-100</span></div>
+          <div class="bg-blue-200"><span>blue-200</span></div>
+          <div class="bg-blue-300"><span>blue-300</span></div>
+          <div class="bg-blue-400"><span>blue-400</span></div>
+          <div class="bg-blue-500"><span>blue-500</span></div>
+          <div class="bg-blue-600"><span>blue-600</span></div>
+          <div class="bg-blue-700 text-white">
+            <span class="text-black">blue-700</span>
+          </div>
+          <div class="bg-blue-800 text-white">
+            <span class="text-black">blue-800</span>
+          </div>
+          <div class="bg-blue-900 text-white">
+            <span class="text-black">blue-900</span>
+          </div>
+        </div>
+
+        <div class="bg-row">
+          <div class="bg-purple-100"><span>purple-100</span></div>
+          <div class="bg-purple-200"><span>purple-200</span></div>
+          <div class="bg-purple-300"><span>purple-300</span></div>
+          <div class="bg-purple-400"><span>purple-400</span></div>
+          <div class="bg-purple-500"><span>purple-500</span></div>
+          <div class="bg-purple-600"><span>purple-600</span></div>
+          <div class="bg-purple-700 text-white">
+            <span class="text-black">purple-700</span>
+          </div>
+          <div class="bg-purple-800 text-white">
+            <span class="text-black">purple-800</span>
+          </div>
+          <div class="bg-purple-900 text-white">
+            <span class="text-black">purple-900</span>
+          </div>
+        </div>
+        <div class="bg-row">
+          <div class="bg-pink-100"><span>pink-100</span></div>
+          <div class="bg-pink-200"><span>pink-200</span></div>
+          <div class="bg-pink-300"><span>pink-300</span></div>
+          <div class="bg-pink-400"><span>pink-400</span></div>
+          <div class="bg-pink-500"><span>pink-500</span></div>
+          <div class="bg-pink-600"><span>pink-600</span></div>
+          <div class="bg-pink-700 text-white">
+            <span class="text-black">pink-700</span>
+          </div>
+          <div class="bg-pink-800 text-white">
+            <span class="text-black">pink-800</span>
+          </div>
+          <div class="bg-pink-900 text-white">
+            <span class="text-black">pink-900</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sizes text-white">
+        <div class="w-full">
+          w-number (number * 4), w-1, w-2, w-3, w-4, w-5, w-6, w-8, w-10, w-12,
+          w-16, w-20, w-24, w-32, w-40, w-48, w-56, w-64
+        </div>
+
+        <div class="w-1/4">w-1/4</div>
+        <div class="w-1/3">w-1/3</div>
+        <div class="w-1/2">w-1/2</div>
+        <div class="w-full"><p class="text-center w-full">w-full</p></div>
+
+        <!-- <div class="w-screen"><p class="text-center w-full mx-6">w-screen</p></div> -->
+      </div>
+
+      <div class="font-sans">.font-sans - Helvetica or similar</div>
+      <div class="font-serif">.font-serif - Times New Roman or similar</div>
+      <div class="font-mono">.font-mono - Monospace or similar</div>
+
+      <p class="italic mb-4">
+        make italic text with <span class="font-black">.italic</span>
+        <span class="not-italic text-blue-400"
+          >and not italic inner text with
+          <span class="font-black text-black">.not-italic</span></span
+        >
+      </p>
+
+      <div class="flex justify-between">
+        <div>
+          <h2 class="text-blue-500">Font size</h2>
+          <div class="text-xs">.text-xs</div>
+          <div class="text-sm">.text-sm</div>
+          <div class="text-base">.text-base</div>
+          <div class="text-lg">.text-lg</div>
+          <div class="text-xl">.text-xl</div>
+          <div class="text-2xl">.text-2xl</div>
+          <div class="text-3xl">.text-3xl</div>
+          <div class="text-4xl">.text-4xl</div>
+          <div class="text-5xl">.text-5xl</div>
+          <div class="text-6xl mb-4">.text-6xl</div>
+
+          <h2 class="text-blue-500">Cursor</h2>
+          <div class="cursor-default">.cursor-default</div>
+          <div class="cursor-pointer">.cursor-pointer</div>
+          <div class="cursor-wait">.cursor-wait</div>
+          <div class="cursor-text">.cursor-text</div>
+          <div class="cursor-move">.cursor-move</div>
+          <div class="cursor-not-allowed mb-4">.cursor-not-allowed</div>
+
+          <h2 class="text-blue-500">Padding, Margin</h2>
+          <div>pl, pr, pt, pb, p, px, py</div>
+          <div>ml, mr, mt, mb, p, mx, my, mx-auto</div>
+        </div>
+
+        <div>
+          <h2 class="text-blue-500">Font weight</h2>
+          <div class="font-hairline">.font-hairline</div>
+          <div class="font-thin">.font-thin</div>
+          <div class="font-light">.font-light</div>
+          <div class="font-normal">.font-normal</div>
+          <div class="font-medium">.font-medium</div>
+          <div class="font-semibold">.font-semibold</div>
+          <div class="font-bold">.font-bold</div>
+          <div class="font-extrabold">.font-extrabold</div>
+          <div class="font-black mb-4">.font-black</div>
+
+          <h2 class="text-blue-500">Letter spacing</h2>
+          <div class="tracking-tighter">.tracking-tighter</div>
+          <div class="tracking-tight">.tracking-tight</div>
+          <div class="tracking-normal">.tracking-normal</div>
+          <div class="tracking-wide">.tracking-wide</div>
+          <div class="tracking-wider">.tracking-wider</div>
+          <div class="tracking-widest mb-4">.tracking-widest</div>
+
+          <h2 class="text-blue-500">Opacity</h2>
+          <div class="opacity-100">.opacity-100</div>
+          <div class="opacity-75">.opacity-75</div>
+          <div class="opacity-50">.opacity-50</div>
+          <div class="opacity-25 mb-4">.opacity-25</div>
+          <!-- <div class="opacity-0 mb-4">.opacity-0</div> -->
+
+          <h2 class="text-blue-500">Position</h2>
+          <div>.ficed</div>
+          <div>.absolute</div>
+          <div>.relative</div>
+          
+        </div>
+
+        <div>
+          <h2 class="text-blue-500">Line height</h2>
+          <div class="leading-none">.leading-none</div>
+          <div class="leading-tight">.leading-tight</div>
+          <div class="leading-snug">.leading-snug</div>
+          <div class="leading-normal">.leading-normal</div>
+          <div class="leading-relaxed">.leading-relaxed</div>
+          <div class="leading-loose mb-4">.leading-loose</div>
+
+          <h2 class="text-blue-500">Text decoration</h2>
+          <div class="underline">.underline</div>
+          <div class="no-underline">.no-underline</div>
+          <div class="line-through mb-4">.line-through</div>
+
+          <h2 class="text-blue-500">Text transform</h2>
+          <div class="uppercase">.uppercase</div>
+          <div class="lowercase">.lowercase</div>
+          <div class="capitalize">.capitalize</div>
+          <div class="normal-case mb-4">.normal-case</div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Focus</h2>
+            <div>.focus:bg-*</div>
+            <div>.focus:text-{color}</div>
+            <div>.focus:border-{color}</div>
+            <div>.focus:font-{weight}</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">display</h2>
+            <div>.block</div>
+            <div>.inline</div>
+            <div>.inline-block</div>
+            <div>.flex</div>
+            <div>.hidden</div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Justify content</h2>
+            <div>.justify-between</div>
+            <div>.justify-around</div>
+            <div>.justify-center</div>
+            <div>.justify-end</div>
+            <div>.justify-start</div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Breakpoints</h2>
+            <div>.sm:class (640px)</div>
+            <div>.md:class (768px)</div>
+            <div>.lg:class (1024px)</div>
+            <div>.xl:class (1280px)</div>
+            <div>.2xl:class (1536px)</div>
+          </div>
+          <h2 class="text-blue-500">Select</h2>
+          <div class="select-none">.select-none</div>
+          <div class="select-text">.select-text</div>
+          <div class="select-all">.select-all</div>
+          <div class="select-auto">.select-auto</div>
+        </div>
+
+        <div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Align items</h2>
+            <div>.items-stretch</div>
+            <div>.items-start</div>
+            <div>.items-center</div>
+            <div>.items-end</div>
+            <div>.items-baseline</div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Flex direction</h2>
+            <div>.flex-row</div>
+            <div>.flex-row-reverse</div>
+            <div>.flex-col</div>
+            <div>.flex-col-reverse</div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Flex wrap</h2>
+            <div>.flex-no-wrap</div>
+            <div>.flex-wrap</div>
+            <div>.flex-wrap-reverse</div>
+          </div>
+          <div class="mb-4">
+            <h2 class="text-blue-500">Hover</h2>
+            <div>.hover:bg-*</div>
+            <div>.hover:text-{color}</div>
+            <div>.hover:border-{color}</div>
+            <div>.hover:font-{weight}</div>
+          </div>
+
+          <h2 class="text-blue-500">Other</h2>
+          <div>.box-content</div>
+          <div>.sr-only</div>
+          <div>.not-sr-only</div>
+        </div>
+      </div>
+
+      <div class="borders text-white my-4">
+        <div class="borders-row">
+          <div class="px-2 border-0 mb-2">border-0</div>
+          <div class="px-2 border mb-2">border</div>
+          <div class="px-2 border-2 mb-2">border-2</div>
+          <div class="px-2 border-4 mb-2">border-4</div>
+          <div class="px-2 border-8 mb-2">border-8</div>
+        </div>
+
+        <div class="borders-row">
+          <div class="px-2 border-t-0 mb-2">border-t-0</div>
+          <div class="px-2 border-t mb-2">border-t</div>
+          <div class="px-2 border-t-2 mb-2">border-t-2</div>
+          <div class="px-2 border-t-4 mb-2">border-t-4</div>
+          <div class="px-2 border-t-8 mb-2">border-t-8</div>
+        </div>
+        <div class="borders-row">
+          <div class="px-2 border-b-0 mb-2">border-b-0</div>
+          <div class="px-2 border-b mb-2">border-b</div>
+          <div class="px-2 border-b-2 mb-2">border-b-2</div>
+          <div class="px-2 border-b-4 mb-2">border-b-4</div>
+          <div class="px-2 border-b-8 mb-2">border-b-8</div>
+        </div>
+        <div class="borders-row">
+          <div class="px-2 border-l-0 mb-2">border-l-0</div>
+          <div class="px-2 border-l mb-2">border-l</div>
+          <div class="px-2 border-l-2 mb-2">border-l-2</div>
+          <div class="px-2 border-l-4 mb-2">border-l-4</div>
+          <div class="px-2 border-l-8 mb-2">border-l-8</div>
+        </div>
+        <div class="borders-row">
+          <div class="px-2 border-r-0 mb-2">border-r-0</div>
+          <div class="px-2 border-r mb-2">border-r</div>
+          <div class="px-2 border-r-2 mb-2">border-r-2</div>
+          <div class="px-2 border-r-4 mb-2">border-r-4</div>
+          <div class="px-2 border-r-8 mb-2">border-r-8</div>
+        </div>
+      </div>
+
+      <div class="flex justify-between my-6 border-types">
+        <div class="border-4 border-solid">.border-solid</div>
+        <div class="border-4 border-dashed">.border-dashed</div>
+        <div class="border-4 border-dotted">.border-dotted</div>
+        <div class="border-4 border-double">.border-double</div>
+        <div class="border-4 border-none">.border-none</div>
+      </div>
+
+      <div class="rounds flex flex-col text-white">
+        <div class="flex">
+          <div class="rounded-sm">.rounded-sm</div>
+          <div class="rounded">.rounded</div>
+          <div class="rounded-lg">.rounded-lg</div>
+          <div class="rounded-full">.rounded-full</div>
+          <div class="rounded-none">.rounded-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-t-sm">.rounded-t-sm</div>
+          <div class="rounded-t">.rounded-t</div>
+          <div class="rounded-t-lg">.rounded-t-lg</div>
+          <div class="rounded-t-full">.rounded-t-full</div>
+          <div class="rounded-t-none">.rounded-t-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-r-sm">.rounded-r-sm</div>
+          <div class="rounded-r">.rounded-r</div>
+          <div class="rounded-r-lg">.rounded-r-lg</div>
+          <div class="rounded-r-full">.rounded-r-full</div>
+          <div class="rounded-r-none">.rounded-r-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-b-sm">.rounded-b-sm</div>
+          <div class="rounded-b">.rounded-b</div>
+          <div class="rounded-b-lg">.rounded-b-lg</div>
+          <div class="rounded-b-full">.rounded-b-full</div>
+          <div class="rounded-b-none">.rounded-b-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-l-sm">.rounded-l-sm</div>
+          <div class="rounded-l">.rounded-l</div>
+          <div class="rounded-l-lg">.rounded-l-lg</div>
+          <div class="rounded-l-full">.rounded-l-full</div>
+          <div class="rounded-l-none">.rounded-l-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-tl-sm">.rounded-tl-sm</div>
+          <div class="rounded-tl">.rounded-tl</div>
+          <div class="rounded-tl-lg">.rounded-tl-lg</div>
+          <div class="rounded-tl-full">.rounded-tl-full</div>
+          <div class="rounded-tl-none">.rounded-tl-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-tr-sm">.rounded-tr-sm</div>
+          <div class="rounded-tr">.rounded-tr</div>
+          <div class="rounded-tr-lg">.rounded-tr-lg</div>
+          <div class="rounded-tr-full">.rounded-tr-full</div>
+          <div class="rounded-tr-none">.rounded-tr-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-br-sm">.rounded-br-sm</div>
+          <div class="rounded-br">.rounded-br</div>
+          <div class="rounded-br-lg">.rounded-br-lg</div>
+          <div class="rounded-br-full">.rounded-br-full</div>
+          <div class="rounded-br-none">.rounded-br-none</div>
+        </div>
+
+        <div class="flex">
+          <div class="rounded-bl-sm">.rounded-bl-sm</div>
+          <div class="rounded-bl">.rounded-bl</div>
+          <div class="rounded-bl-lg">.rounded-bl-lg</div>
+          <div class="rounded-bl-full">.rounded-bl-full</div>
+          <div class="rounded-bl-none">.rounded-bl-none</div>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="shadows my-10 flex justify-between">
+          <div class="bg-white shadow">.shadow</div>
+          <div class="bg-white shadow-md">.shadow-md</div>
+          <div class="bg-white shadow-lg">.shadow-lg</div>
+          <div class="bg-white shadow-xl">.shadow-xl</div>
+          <div class="bg-white shadow-2xl">.shadow-2xl</div>
+        </div>
+        <div class="shadows mb-10 flex justify-between">
+          <div class="bg-white shadow-inner shadow">.shadow .shadow-inner</div>
+          <div class="bg-white shadow-inner shadow-md">
+            .shadow-md .shadow-inner
+          </div>
+          <div class="bg-white shadow-inner shadow-lg">
+            .shadow-lg .shadow-inner
+          </div>
+          <div class="bg-white shadow-inner shadow-xl">
+            .shadow-xl .shadow-inner
+          </div>
+          <div class="bg-white shadow-inner shadow-2xl">
+            .shadow-2xl .shadow-inner
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
