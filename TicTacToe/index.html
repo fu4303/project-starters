@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <meta name="description" content="A simple Tic Tac Toe game!" />
+    <link rel="canonical" href="https://raravi.github.io/tictactoe/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tic Tae Toe by Amith Raravi" />
+    <meta property="og:description" content="A simple Tic Tac Toe game!" />
+    <meta property="og:url" content="https://raravi.github.io/tictactoe/" />
+    <meta property="og:site_name" content="Tic Tae Toe" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Tic Tae Toe by Amith Raravi" />
+    <meta name="twitter:title" content="Amith Raravi" />
+    <meta name="twitter:site" content="@amith_raravi" />
+    <meta name="twitter:creator" content="@amith_raravi" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__text"><span class="header__firstletter">T</span>ic <span class="header__firstletter">T</span>ac <span class="header__firstletter">T</span>oe</h1>
+        <div class="header__separator"></div>
+      </header>
+      <section class="main">
+        <div class="gamecontainer">
+          <div class="gamecontainer__game">
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="0">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="1">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="2">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="3">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="4">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="5">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="6">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="7">Y</div>
+            <div class="gamecontainer__box gamecontainer__box--empty" data-id="8">Y</div>
+          </div>
+        </div>
+        <div class="statscontainer">
+          <div class="statscontainer__stats">
+            <h2 class="statscontainer__header">Stats</h2>
+            <table class="statscontainer__table">
+              <tr class="statscontainer__stat">
+                <td>Total</td>
+                <td class="statscontainer__total">0</td>
+              </tr>
+              <tr class="statscontainer__stat">
+                <td>Won</td>
+                <td class="statscontainer__won">0</td>
+              </tr>
+              <tr class="statscontainer__stat">
+                <td>Draw</td>
+                <td class="statscontainer__draw">0</td>
+              </tr>
+              <tr class="statscontainer__stat">
+                <td>Lost</td>
+                <td class="statscontainer__lost">0</td>
+              </tr>
+            </table>
+          </div>
+          <div class="statscontainer__status"></div>
+          <div class="statscontainer__newgame">New Game</div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>&#169; 2020 Amith Raravi - source code on <a href="https://github.com/raravi/tictactoe">Github</a></p>
+      </footer>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
