@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root{
+    --primary-color: #DC2626;
+    --secondary-color: #F59E0B;
+}
+body{
+    margin:auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("/assets/shakespeare2.webp");
+}
+h1{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: 0.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 1px black;
+}
+header img{
+    margin:auto;
+    width: 100%;
+    height: auto;
+}
+aside {
+    width: 30%;
+    margin: auto;
+    font-style: italic;
+    background-color: lightgray;
+}
+h3{
+    overflow-wrap: break-word;
+}
+.text-content{
+    margin: 0.5rem;
+}
+.site-content{
+    margin: 3rem;
+    text-align: center;
+    border-left: 5px outset var(--primary-color);
+    border-right: 5px outset var(--primary-color);
+    background-color: white;
+    overflow-wrap: break-word;
+}
+.no-bullet{
+    list-style: none;
+}
+.-inline li {
+    display: inline;
+    padding: 0.5rem;
+}
+.navigation{
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(to bottom right, var(--secondary-color),var(--primary-color));
+    color: white;
+    padding: 1rem 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.navigation .brand-name{
+    font-weight: bold;
+}
+.navigation ul{
+    text-align: right;
+}
+.navigation li a{
+    color:white;
+    text-decoration: none;
+
+}
+p{
+    width:auto;
+    display: initial;
+    font-weight: bolder;
+}
+#inputTxt, #outputTxt{
+    width: 300px;
+    display: block;
+    margin: 0.5rem auto;
+    text-align: center;
+    border: 1px solid  black;
+    background-color: white;
+    font-size: small;
+    padding: 2rem;
+}
+
+.button-area{
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    align-items: center;
+}
+button{
+    color: var(white);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    max-width: 140px;
+    margin: auto;
+    height: 4rem;
+    display: block;
+}
+.footer{
+    padding: 2rem;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(to bottom right,var(--primary-color), var(--secondary-color));
+    border-top-right-radius:  1rem;
+    text-align: center;
+}
+.flex-class{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
